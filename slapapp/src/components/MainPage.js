@@ -54,19 +54,19 @@ function MainPage() {
             title: '12'
         }
     ]
-);
+    );
 
 
 
-function shuffle(array) {
-    return array.sort(() => Math.random() - 0.5);
-  }
+    function shuffle(array) {
+        return array.sort(() => Math.random() - 0.5);
+    }
     function test() {
 
         const shuffledData = shuffle(imgUrl)
         console.log(shuffledData);
         setImgUrl(shuffledData);
-        
+
     }
 
     // const imgList = imgUrl.map((IMG) =>
@@ -82,8 +82,8 @@ function shuffle(array) {
             {/* {imgList} */}
 
             {imgUrl.map(IMG => (
-           <ImageBlock url={IMG.url} title={IMG.title} />
-        ))}
+                <ImageBlock url={IMG.url} title={IMG.title} />
+            ))}
         </div>
     )
 
