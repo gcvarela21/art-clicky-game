@@ -6,7 +6,7 @@ function ImgBlock(props) {
     return (
 
         <div className='col-3 d-flex-content-center'>
-            <img src={props.url} title={props.title} />
+            <img id={props.title} src={props.url} title={props.title}onClick={() => props.handleClick(props.title, props.click)} />
         </div>
     )
 };
