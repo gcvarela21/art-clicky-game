@@ -8,8 +8,18 @@ class MainPage extends Component {
     state = {
         art: art
     };
+    render() {
+        return (
+            <div className='row'>
+                {this.state.art.map(image => (
+                    <ImgBlock url={image.url} title={image.title} />
+                ))}
+            </div>
+        )
+    }
 
-
+}
+export default MainPage;
     // shuffle = () => {
     //     return art.sort(() => Math.random() - 0.5);
     // };
@@ -22,18 +32,4 @@ class MainPage extends Component {
     // step 1: add eventListner to the img not the row 
     // step 2: make react reload when state has been changed
     // step 3: write the logic if they click the same img 
-    render() {
-        return (
-            <div className='row'>
-
-
-                {this.state.art.map(image => (
-                    <ImgBlock url={image.url} title={image.title} />
-                ))}
-            </div>
-        )
-    }
-
-}
-export default MainPage;
 
