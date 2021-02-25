@@ -6,7 +6,7 @@ import art from '../Art.json';
 class MainPage extends Component {
 
     state = {
-        art: art,
+        url: art,
         clicked: false,
         count: 0,
         topScore: 0,
@@ -36,7 +36,7 @@ class MainPage extends Component {
     render() {
         return (
             <div className='row'>
-                {this.state.art.map(image => (
+                {art.map(image => (
                     <ImgBlock url={image.url} title={image.title} key={image.title} click={image.click} handleClick={this.handleClick} />
                 ))}
             </div>
