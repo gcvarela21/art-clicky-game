@@ -24,7 +24,7 @@ This web application is a movie review hub for people who want to get away from 
 * [Live Site](https://gcvarela21.github.io/toon.slap/)
 * [Project Repository](https://github.com/gcvarela21/toon.slap)
 
-![GIF Visual of The Deployed Web Application]()
+![GIF Visual of The Deployed Web Application](https://github.com/gcvarela21/toon.slap/blob/main/image.png?raw=true)
 
 ______________________________________________________________________________
 
