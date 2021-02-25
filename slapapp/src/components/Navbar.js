@@ -28,7 +28,7 @@ function Navbar() {
                <Link to='/' className='navbar-logo'>
                Clicky Game <i className='fas fa-gamepad' />
                 </Link>
-                <div className='menu-icon' onClick={handleClick}>
+                {/* <div className='menu-icon' onClick={handleClick}>
                     <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
                 </div>
                 <ul clasName={click ? 'nav-menu active' : 'nav-menu'}>
@@ -58,7 +58,7 @@ function Navbar() {
                         </Link>
                     </li>
                 </ul>
-                {button && <Button buttonStyle='btn--outline'>Contact</Button>}
+                {button && <Button buttonStyle='btn--outline'>Contact</Button>} */}
             </div>
         </nav>
             

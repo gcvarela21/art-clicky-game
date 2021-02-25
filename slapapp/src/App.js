@@ -8,16 +8,13 @@ import MainPage from './components/MainPage'
 function App() {
   return (
     <>
-    < MainPage />
+      <Router>
+        <Navbar />
+      </Router>
+      < MainPage />
     </>
   );
 }
 
 export default App;
 
-      /* <Router>
-        <Navbar />
-        <Switch>
-          <Route path='/' exact />
-        </Switch>
-      </Router> */
