@@ -19,7 +19,7 @@ ______________________________________________________________________________
 
 ## Summary
 
-This web application is a movie review hub for people who want to get away from the mainstream. Let’s face it… no one really likes tomatoes, especially RottenTomatoes. It can all be a bit Overrated.
+This web application is a memory game, that randomizes the image locations on a grid. Clicking on different images increases your score, and clicking on the same image twice zeroes out your score.
 
 * [Live Site](https://gcvarela21.github.io/toon.slap/)
 * [Project Repository](https://github.com/gcvarela21/toon.slap)
@@ -78,6 +78,34 @@ ______________________________________________________________________________
 This Apllication in its development uses Node Js and React to render the single web page. Using various componets and passing variables through propbs we build the functionallity of the game.
 
 The images objects are stored in a json folder and imported for use in within the componets. Components are exported to the App.js file, and then exported to the index.js where the index.html renders page.
+
+```javascript
+import React, { useState } from 'react';
+import './ImgBlock.css';
+/// this is the img card repeating element
+function ImgBlock(props) {
+    //component always has a return() and Render()
+    return (
+
+        <div className='col-3 d-flex-content-center'>
+            <img id={props.title} src={props.url} title={props.title}onClick={() => props.handleClick(props.title, props.click)} />
+        </div>
+    )
+};
+export default ImgBlock;
+```
+
+```javascript
+render() {
+        return (
+            <div className='row'>
+                {art.map(image => (
+                    <ImgBlock url={image.url} title={image.title} key={image.title} click={image.click} handleClick={this.handleClick} />
+                ))}
+            </div>
+        )
+    }
+```
 
 ```javascript
 
