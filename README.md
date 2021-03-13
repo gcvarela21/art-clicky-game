@@ -34,7 +34,7 @@ ______________________________________________________________________________
 
 ## Dependencies
 
-**Built With**
+Built With
 
 * [HTML 5](https://www.w3schools.com/html/)
 * [CSS](https://www.w3schools.com/css/css_howto.asp)
@@ -115,7 +115,7 @@ ______________________________________________________________________________
 
 ## Creator
 
-**& Gloria C Varela**
+Gloria C Varela
 
 * [GitHub Profile Page](https://github.com/gcvarela21)
 * [Web Developer Portfoio Website](https://gcvarela21.github.io/glo.digital/)
