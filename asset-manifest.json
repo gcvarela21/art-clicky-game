@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/art-clicky-game/static/css/main.6f52daa3.chunk.css",
+    "main.js": "/art-clicky-game/static/js/main.0630cc2a.chunk.js",
+    "main.js.map": "/art-clicky-game/static/js/main.0630cc2a.chunk.js.map",
+    "runtime-main.js": "/art-clicky-game/static/js/runtime-main.7ace4c80.js",
+    "runtime-main.js.map": "/art-clicky-game/static/js/runtime-main.7ace4c80.js.map",
+    "static/js/2.88ea615e.chunk.js": "/art-clicky-game/static/js/2.88ea615e.chunk.js",
+    "static/js/2.88ea615e.chunk.js.map": "/art-clicky-game/static/js/2.88ea615e.chunk.js.map",
+    "index.html": "/art-clicky-game/index.html",
+    "static/css/main.6f52daa3.chunk.css.map": "/art-clicky-game/static/css/main.6f52daa3.chunk.css.map",
+    "static/js/2.88ea615e.chunk.js.LICENSE.txt": "/art-clicky-game/static/js/2.88ea615e.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7ace4c80.js",
+    "static/js/2.88ea615e.chunk.js",
+    "static/css/main.6f52daa3.chunk.css",
+    "static/js/main.0630cc2a.chunk.js"
+  ]
+}
