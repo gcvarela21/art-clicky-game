@@ -21,8 +21,8 @@ ______________________________________________________________________________
 
 This web application is a memory game, that randomizes the image locations on a grid. Clicking on different images increases your score, and clicking on the same image twice zeroes out your score.
 
-* [Live Site](https://gcvarela21.github.io/toon.slap/)
-* [Project Repository](https://github.com/gcvarela21/toon.slap)
+* [Live Site](https://gcvarela21.github.io/art-clicky-game/)
+* [Project Repository](https://github.com/gcvarela21/art-clicky-game)
 
 ![GIF Visual of The Deployed Web Application](https://github.com/gcvarela21/toon.slap/blob/main/image.png?raw=true)
 
