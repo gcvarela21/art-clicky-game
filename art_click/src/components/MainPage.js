@@ -1,54 +1,78 @@
 import React, { Component } from 'react';
-import ImgBlock from './ImgBlock';
-import art from '../Art.json';
+import ImgBlock from './ImgBlock.js';
+import Header from './Header.js';
+import images from '../Art.json';
 
 // render all images page and click events
 class MainPage extends Component {
 
     state = {
-        url: art,
+        url: images,
         clicked: false,
-        count: 0,
+        score: 0,
         topScore: 0,
 
     };
 
-    handleClick = (props) => {
-        const art = this.state.art;
-        if (clickeded) {
-            art.forEach((art, index) => {
-                art[index].clicked = false;
-                console.log(clicked);
-            }); return this.setState({
-                art: art.sort(() => Math.random() - 0.5),
-                count: this.state.count + 1
-            })
-        } else {
-            console.log("else");
+
+    
+        handleClick = (id, clicked) => {
+       
+    
+        if (clicked === false) {
+          console.log(images);
+    
+          var newScore = this.state.score + 1
+          console.log(newScore);
+          if (newScore > this.state.topScore) {
+            this.state.topScore = newScore
+          }
+    
+          var img = this.state.url
+    
+          img.forEach((images, index) => {
+            if (id === images.id) {
+              img[index].clicked = true;
+            }
+          })
+    
+          return this.setState({
+            // shuffle
+            url: img.sort(() => Math.random() - 0.5),
+            score: newScore,
+            clicked: true
+          })
         }
-    };
-
-
-
-    render() {
-        return (
+        // score depricated
+        else {
+          // reset reset score save hiscore
+          images.forEach((index) => {index.clicked = false})
+          return this.setState({
+            score: 0
+          })
+        }
+        // checks topscore
+      }
+        render() {
+          return (
             <>
-                <div className='row'>
-                    {art.map(image => (
-                    <ImgBlock
-                        count={this.state.count}
-                        url={image.url}
-                        title={image.title}
-                        key={image.title}
-                        click={image.click}
-                        handleClick={this.handleClick} />
-                ))}
-                </div>
-
+              <Header score={this.state.score} topScore={this.state.topScore} />
+              <div className='row'>
+               {this.state.url.map(image => (
+                     <ImgBlock 
+                     url={image.url} 
+                     title={image.title} 
+                     key={image.title} 
+                     clicked={image.clicked} 
+                     handleClick={this.handleClick} />
+                 ))}
+             </div>
+    
             </>
-        )
-    }
-}
+    
+          );
+        }
+      }
 export default MainPage;
     // shuffle = () => {
     //     return art.sort(() => Math.random() - 0.5);

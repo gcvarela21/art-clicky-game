@@ -10,7 +10,7 @@ function Navbar() {
     return (
         <>
         <nav className='navbar row'>
-            <div className='col-12 navbar-container d-flex justify-content-center'>
+            <div className='col-12 header d-flex justify-content-center'>
 
               
                 <i className='fas fa-gamepad'>Clicky Game</ i>

@@ -1,9 +1,9 @@
 import React from 'react';
-import './Score.css';
+import './Header.css';
 
 
 
-function Score() {
+function Score(props) {
 
 
 
