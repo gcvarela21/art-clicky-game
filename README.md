@@ -24,7 +24,7 @@ This web application is a memory game, that randomizes the image locations on a 
 * [Live Site](https://gcvarela21.github.io/art-clicky-game/)
 * [Project Repository](https://github.com/gcvarela21/art-clicky-game)
 
-![GIF Visual of The Deployed Web Application](https://github.com/gcvarela21/toon.slap/blob/main/image.png?raw=true)
+![GIF Visual of The Deployed Web Application](https://github.com/gcvarela21/art-clicky-game/blob/main/art_click.gif?raw=true)
 
 ______________________________________________________________________________
 
@@ -79,37 +79,67 @@ This Apllication in its development uses Node Js and React to render the single 
 
 The images objects are stored in a json folder and imported for use in within the componets. Components are exported to the App.js file, and then exported to the index.js where the index.html renders page.
 
-```javascript
-import React, { useState } from 'react';
-import './ImgBlock.css';
-/// this is the img card repeating element
-function ImgBlock(props) {
-    //component always has a return() and Render()
-    return (
-
-        <div className='col-3 d-flex-content-center'>
-            <img id={props.title} src={props.url} title={props.title}onClick={() => props.handleClick(props.title, props.click)} />
-        </div>
-    )
-};
-export default ImgBlock;
-```
+The main functionality is created in the MainPage.js where the state is set and the json images are imported. A funnction runs through to see if the imagaes have bee selected based on a true or false bolean value, the images are shuffled and the score is incremented with a handle click fumction that is passed tp a buttum in the image card component through props.
 
 ```javascript
-render() {
-        return (
-            <div className='row'>
-                {art.map(image => (
-                    <ImgBlock url={image.url} title={image.title} key={image.title} click={image.click} handleClick={this.handleClick} />
-                ))}
-            </div>
-        )
-    }
+    state = {
+        url: images,
+        clicked: false,
+        score: 0,
+        topScore: 0,
+
+    };
+        handleClick = (id, clicked) => {
+        if (clicked === false) {
+          console.log(images);
+          var newScore = this.state.score + 1
+          console.log(newScore);
+          if (newScore > this.state.topScore) {
+            this.state.topScore = newScore
+          }
+          var img = this.state.url
+          img.forEach((images, index) => {
+            if (id === images.id) {
+              img[index].clicked = true;
+            }
+          })
+          return this.setState({
+            // shuffle
+            url: img.sort(() => Math.random() - 0.5),
+            score: newScore,
+            clicked: true
+          })
+        }
+        // score depricated
+        else {
+          // reset reset score save hiscore
+          images.forEach((index) => {index.clicked = false})
+          return this.setState({
+            score: 0
+          })
+        }
+        // checks topscore
+      }
+        render() {
+          return (
+            <>
+              <Header score={this.state.score} topScore={this.state.topScore} />
+              <div className='row'>
+               {this.state.url.map(image => (
+                     <ImgBlock 
+                     url={image.url} 
+                     title={image.title} 
+                     key={image.title} 
+                     clicked={image.clicked} 
+                     handleClick={this.handleClick} />
+                 ))}
+             </div>
+            </>
+          );
+        }
+      }
 ```
 
-```javascript
-
-```
 
 ______________________________________________________________________________
 
